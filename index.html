@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +10,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
@@ -77,6 +77,23 @@
     .buttons i { font-size: 24px; cursor: pointer; transition: 0.3s; }
     .buttons i:hover { color: #ffdde1; transform: scale(1.1); }
     .volume { width: 100%; margin-top: 10px; }
+
+    /* footer styling */
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      z-index: 2;
+    }
+    footer span {
+      background: rgba(0,0,0,0.4);
+      padding: 5px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
   </style>
 </head>
 <body>
@@ -113,6 +130,10 @@
     <!-- Your song -->
     <audio id="song" src="song.mp3"></audio>
   </div>
+
+  <footer>
+    <span>Made by Animesh with ❤</span>
+  </footer>
 
   <script>
     const song = document.getElementById("song");
